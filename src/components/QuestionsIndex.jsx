@@ -9,7 +9,7 @@ export default class App extends Component {
     this.state = {
       offset: 0,
       data: [],
-      perPage: 11,
+      perPage: 3,
       currentPage: 0,
       results: [],
     };
