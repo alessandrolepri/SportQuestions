@@ -88,7 +88,7 @@ module.exports = {
     ],
     resolve: {
         // File extensions. Add others and needed (e.g. scss, json)
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".jsx", ".json"],
         modules: ["node_modules"],
         alias: {
             Components: path.resolve(resolveApp("src"), "components"),

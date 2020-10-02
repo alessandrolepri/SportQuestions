@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import axios from "axios";
-import ReactPaginate from "react-paginate";
-import Buttons from "../components/questions/Buttons";
+import React from "react"
+import axios from "axios"
+import ReactPaginate from "react-paginate"
+import Buttons from '../Buttons'
 
-export default class App extends Component {
+class Test extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -75,8 +75,10 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div>
+      <>
+      <div className="question">
         {this.state.postData}
+        </div>
         <ReactPaginate
           previousLabel={"prev"}
           nextLabel={"next"}
@@ -90,7 +92,9 @@ export default class App extends Component {
           subContainerClassName={"pages pagination"}
           activeClassName={"active"}
         />
-      </div>
+      </>
     );
   }
 }
+
+export default Test
