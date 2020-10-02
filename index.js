@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
 const mongoose = require("mongoose");
-const routes = require("./config/routes");
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -26,10 +25,10 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use("/api", routes);
-
 app.get("/*", (req, res) => res.sendFile(`${__dirname}/dist/index.html`));
 
 app.listen(process.env.PORT || 4000, () =>
     console.log(`Up and running on port ${process.env.PORT}`)
 );
+
+module.exports = app;
